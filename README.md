@@ -57,6 +57,14 @@ once the server is running the terminal will show
 `Server is running on port 3000`
 
 `Connected to MongoDB`
+
+For Signing in:
+
+Username: "test@gmail.com"
+
+Password: "12345"
+
+
 ## Contributing
 
 Contributions and improvements are welcomed, Happy coding!
