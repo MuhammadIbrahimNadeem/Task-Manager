@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-b from-[#101212] relative to-[#08201D]">
+        
+        <nav class="bg-gradient-to-br from-teal-950 to-[#08201D] backdrop-blur-lg border border-teal-800/40 rounded-xl mx-4 mt-4">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex justify-between items-center py-4">
+                    <div class="text-2xl font-bold text-gray-100">
+                        Welcome, <span id="userName">Ibrahim</span>
+                    </div>
+                    <div class="flex gap-4">
+                        <button onclick="openModal()" class="bg-zinc-100/10 hover:bg-zinc-100/20 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-all duration-200 border border-zinc-700/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+                            </svg>
+                            
+                        </button>
+                        <a href="/logout" class="bg-red-500/10 hover:bg-red-500/20 text-red-500 px-4 py-2 rounded-lg transition-all duration-200 border border-red-500/20">
+                            <i class="ri-logout-box-r-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        
+
+        
+        <div class="max-w-6xl mx-auto px-4 py-8">
+            <div class="flex overflow-x-auto gap-6 pb-4" id="tasksContainer">
+                
+            </div>
+        </div>
+    </div>
+
+  <div id="taskModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center">
+    <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 rounded-2xl p-8 max-w-md w-full border border-zinc-800/50 shadow-xl shadow-black/20">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-semibold bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">Create New Task</h2>
+            <button onclick="closeModal()" class="text-zinc-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <form id="taskForm" class="space-y-6">
+            <div>
+                <label class="block text-zinc-400 mb-2 text-sm">Task Title</label>
+                <input type="text" id="taskTitle" required class="w-full bg-zinc-800/50 border border-zinc-700/50 rounded-xl px-4 py-3 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all">
+            </div>
+            <div>
+                <label class="block text-zinc-400 mb-2 text-sm">Task Description</label>
+                <textarea id="taskDescription" required class="w-full bg-zinc-800/50 border border-zinc-700/50 rounded-xl px-4 py-3 h-32 text-white placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 rounded-xl font-medium shadow-lg shadow-blue-500/20 transition-all duration-200 hover:shadow-blue-500/30">
+                Add Task
+            </button>
+        </form>
+    </div>
+  </div>
+
+
+
+  <script src="/javascripts/script.js"></script>
+
+</body>
+</html>
